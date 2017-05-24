@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cocoyimasa.github.io/"/>
-  <updated>2017-05-24T15:06:45.000Z</updated>
+  <updated>2017-05-24T15:24:12.000Z</updated>
   <id>http://cocoyimasa.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://cocoyimasa.github.io/2017/05/24/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://cocoyimasa.github.io/2017/05/24/Vue学习笔记（一）/</id>
     <published>2017-05-24T14:25:32.000Z</published>
-    <updated>2017-05-24T15:06:45.000Z</updated>
+    <updated>2017-05-24T15:24:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="本系列之缘起"><a href="#本系列之缘起" class="headerlink" title="本系列之缘起"></a>本系列之缘起</h1><p>前段时间决定做一件事：每天写一个实例，积少成多就是一个项目。从今天开始实践。</p>
 <p>选定的实践目标为 ： 学会Vue，并构建中型项目。</p>
@@ -47,6 +47,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import Me from &apos;@/components/Me.vue&apos;</div><div class="line">export default &#123;</div><div class="line">  name: &apos;hello&apos;,</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      msg: &apos;Welcome to Your Vue.js App&apos;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  components: &#123; Me &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>总的来说就是引入Me.vue，并添加一个字段components，内容为Me。<br>完成之后的效果如下：<br><img src="/images/show.png" alt="展示"></p>
 <p>至此，完成了新加一个component的任务。</p>
+<h1 id="加载数据"><a href="#加载数据" class="headerlink" title="加载数据"></a>加载数据</h1><p>先说个题外话，eslint太烦人了，检查太严格，连多了个空格都要报错，对于我这种需要快速写代码检验效果的人简直是折磨，<br>果断禁掉。我承认eslint有好处，但是这里为了快速写代码，必须禁掉。<br>方法：<br>在eslintignore中添加src/*,这样src下任何文件都不会被eslint检查。<br>如果是团队里写代码，最好还是把eslint打开，这样保证团队代码风格尽量一致。</p>
+<p>之后我们可以加载数据了。<br>npm install vue-resource –save</p>
+<p>在Me.vue的data下面添加<br>mounted: function() {<br>    this.$http.jsonp(‘’, {}, {<br>        headers: {</p>
+<pre><code>    },
+    emulateJSON: true
+}).then(function(response) {
+}, function(response) {
+});
+</code></pre><p>  }<br>这样即可异步加载外部网站的数据。</p>
 ]]></content>
     
     <summary type="html">
