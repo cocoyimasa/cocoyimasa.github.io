@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="仔细一想，似乎没写过什么好文章。 本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。 以后还是专注于写好文章，至少要深思熟虑才要发过来。 烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。">
+<meta name="description" content="title: Haskell Study Plandate: 2018-06-14 20:04:24 tags:C++模拟Haskell的Monadcocoyimasa–2018.2.8 模拟Monad主要是为了写语法分析器简便。 之前试着用C#模拟，好麻烦。。改用C++之后一路通畅。 只要支持模板、支持lambda表达式或函数指针或委托，且能重载运算符的强类型语言其实都可以。 12345678">
 <meta property="og:type" content="article">
-<meta property="og:title" content="仔细一想，似乎没写过什么好文章">
-<meta property="og:url" content="http://cocoyimasa.github.io/2017/05/22/仔细一想，似乎没写过什么好文章/index.html">
+<meta property="og:title" content="C++模拟Haskell的Monad">
+<meta property="og:url" content="http://cocoyimasa.github.io/2018/06/14/C-模拟Haskell的Monad/index.html">
 <meta property="og:site_name" content="一蓑烟雨任平生">
-<meta property="og:description" content="仔细一想，似乎没写过什么好文章。 本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。 以后还是专注于写好文章，至少要深思熟虑才要发过来。 烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。">
+<meta property="og:description" content="title: Haskell Study Plandate: 2018-06-14 20:04:24 tags:C++模拟Haskell的Monadcocoyimasa–2018.2.8 模拟Monad主要是为了写语法分析器简便。 之前试着用C#模拟，好麻烦。。改用C++之后一路通畅。 只要支持模板、支持lambda表达式或函数指针或委托，且能重载运算符的强类型语言其实都可以。 12345678">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-05-21T17:03:06.000Z">
+<meta property="og:updated_time" content="2018-06-14T12:05:58.578Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仔细一想，似乎没写过什么好文章">
-<meta name="twitter:description" content="仔细一想，似乎没写过什么好文章。 本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。 以后还是专注于写好文章，至少要深思熟虑才要发过来。 烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。">
+<meta name="twitter:title" content="C++模拟Haskell的Monad">
+<meta name="twitter:description" content="title: Haskell Study Plandate: 2018-06-14 20:04:24 tags:C++模拟Haskell的Monadcocoyimasa–2018.2.8 模拟Monad主要是为了写语法分析器简便。 之前试着用C#模拟，好麻烦。。改用C++之后一路通畅。 只要支持模板、支持lambda表达式或函数指针或委托，且能重载运算符的强类型语言其实都可以。 12345678">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>仔细一想，似乎没写过什么好文章 | 一蓑烟雨任平生</title>
+<title>C++模拟Haskell的Monad | 一蓑烟雨任平生</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -255,11 +255,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-仔细一想，似乎没写过什么好文章" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-C-模拟Haskell的Monad" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/05/22/仔细一想，似乎没写过什么好文章/" class="article-date">
-      <time datetime="2017-05-21T17:00:13.000Z" itemprop="datePublished">2017-05-22</time>
+      <a href="/2018/06/14/C-模拟Haskell的Monad/" class="article-date">
+      <time datetime="2018-06-14T12:04:57.000Z" itemprop="datePublished">2018-06-14</time>
 </a>
 
 
@@ -274,7 +274,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      仔细一想，似乎没写过什么好文章
+      C++模拟Haskell的Monad
     </h1>
   
 
@@ -291,10 +291,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>仔细一想，似乎没写过什么好文章。</p>
-<p>本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。</p>
-<p>以后还是专注于写好文章，至少要深思熟虑才要发过来。</p>
-<p>烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。</p>
+        <hr>
+<p>title: Haskell Study Plan<br>date: 2018-06-14 20:04:24</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h2 id="C-模拟Haskell的Monad"><a href="#C-模拟Haskell的Monad" class="headerlink" title="C++模拟Haskell的Monad"></a>C++模拟Haskell的Monad</h2><p>cocoyimasa–2018.2.8</p>
+<p>模拟Monad主要是为了写语法分析器简便。</p>
+<p>之前试着用C#模拟，好麻烦。。改用C++之后一路通畅。</p>
+<p>只要支持模板、支持lambda表达式或函数指针或委托，且能重载运算符的强类型语言其实都可以。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monad</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    T* val;</span><br><span class="line">    Monad() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    Monad(T* a) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;val = a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> K&gt;</span><br><span class="line">Monad&lt;K&gt;* <span class="keyword">operator</span>&gt;&gt;(Monad&lt;T&gt;* a, function&lt;Monad&lt;K&gt;*(T*)&gt; f) &#123; <span class="comment">//&gt;&gt;=,chain</span></span><br><span class="line">    <span class="keyword">return</span> f(a-&gt;val);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">Monad&lt;T&gt;* id(T* a) &#123; <span class="comment">//pack,return</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Monad&lt;T&gt;(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后Parser就可以写成这样:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parser</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    Parser() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    Parser(<span class="keyword">int</span> id) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;id = id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Parse</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">Parser* p = <span class="keyword">new</span> Parser(<span class="number">1</span>);</span><br><span class="line">Monad&lt;Parser&gt;* pm = id(p);</span><br><span class="line"><span class="comment">//StatementParser, IfParser, ForParser, ExpressionParser,EndParser 是 Parser的子类</span></span><br><span class="line">function&lt;Monad&lt;Parser&gt;*(Parser*)&gt; f = [](Parser* a) &#123;</span><br><span class="line">    a-&gt;Parse();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Monad&lt;Parser&gt;(<span class="keyword">new</span> StatementParser(a-&gt;id + <span class="number">1</span>));</span><br><span class="line">&#125;;</span><br><span class="line">function&lt;Monad&lt;Parser&gt;*(Parser*)&gt; g = [](Parser* a) &#123;</span><br><span class="line">    a-&gt;Parse();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Monad&lt;Parser&gt;(<span class="keyword">new</span> IfParser(a-&gt;id + <span class="number">1</span>));</span><br><span class="line">&#125;;</span><br><span class="line">function&lt;Monad&lt;Parser&gt;*(Parser*)&gt; h = [](Parser* a) &#123;</span><br><span class="line">    a-&gt;Parse();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Monad&lt;Parser&gt;(<span class="keyword">new</span> ForParser(a-&gt;id + <span class="number">1</span>));</span><br><span class="line">&#125;;</span><br><span class="line">function&lt;Monad&lt;Parser&gt;*(Parser*)&gt; m = [](Parser* a) &#123;</span><br><span class="line">    a-&gt;Parse();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Monad&lt;Parser&gt;(<span class="keyword">new</span> ExpressionParser(a-&gt;id + <span class="number">1</span>));</span><br><span class="line">&#125;;</span><br><span class="line">function&lt;Monad&lt;Parser&gt;*(Parser*)&gt; end = [](Parser* a) &#123;</span><br><span class="line">    a-&gt;Parse();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Monad&lt;Parser&gt;(<span class="keyword">new</span> EndParser(a-&gt;id + <span class="number">1</span>));</span><br><span class="line">&#125;;</span><br><span class="line">Monad&lt;Parser&gt;* parserS = pm &gt;&gt; f &gt;&gt; g &gt;&gt; h &gt;&gt; m &gt;&gt; end; <span class="comment">//做的基础设施就是为了这样串起来</span></span><br></pre></td></tr></table></figure>
+<p>只需要把各环节的小的Parser函数f定义好，串联起来形成各种文法表达式，再汇集起来，就是完整的组合子风格语法分析器（Parser Combinator）。</p>
+<p>我仅仅写的是一个示例，基本啥事没做。</p>
+<p>后面的事。。。慢慢做吧。精力和编程热情都大不如三年前了，根本找不到当年深夜三点调代码的状态了。</p>
+<p>也许就没有后续了。</p>
+<p>以上。</p>
 
       
     </div>
@@ -303,13 +313,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/05/22/仔细一想，似乎没写过什么好文章/">仔细一想，似乎没写过什么好文章</a></p>
+        <p><span>本文标题:</span><a href="/2018/06/14/C-模拟Haskell的Monad/">C++模拟Haskell的Monad</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Hesai Wang</a></p>
-        <p><span>发布时间:</span>2017-05-22, 01:00:13</p>
-        <p><span>最后更新:</span>2017-05-22, 01:03:06</p>
+        <p><span>发布时间:</span>2018-06-14, 20:04:57</p>
+        <p><span>最后更新:</span>2018-06-14, 20:05:58</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/05/22/仔细一想，似乎没写过什么好文章/" title="仔细一想，似乎没写过什么好文章">http://cocoyimasa.github.io/2017/05/22/仔细一想，似乎没写过什么好文章/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://cocoyimasa.github.io/2017/05/22/仔细一想，似乎没写过什么好文章/　　作者: Hesai Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/14/C-模拟Haskell的Monad/" title="C++模拟Haskell的Monad">http://cocoyimasa.github.io/2018/06/14/C-模拟Haskell的Monad/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://cocoyimasa.github.io/2018/06/14/C-模拟Haskell的Monad/　　作者: Hesai Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -321,16 +331,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/05/24/Vue学习笔记（一）/">
-                    Vue学习笔记（一）
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/05/21/博客测试/">
-                    博客测试
+                <a href="/2018/06/14/Haskell-Study-Plan/">
+                    Haskell Study Plan
                 </a>
             </div>
         
@@ -342,7 +346,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags"><span class="toc-number">1.</span> <span class="toc-text">tags:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-模拟Haskell的Monad"><span class="toc-number">2.</span> <span class="toc-text">C++模拟Haskell的Monad</span></a></li></ol>
         
     </div>
     <style>
@@ -378,7 +382,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"仔细一想，似乎没写过什么好文章　| 一蓑烟雨任平生　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"C++模拟Haskell的Monad　| 一蓑烟雨任平生　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -398,15 +402,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/05/24/Vue学习笔记（一）/" title="上一篇: Vue学习笔记（一）">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/05/21/博客测试/" title="下一篇: 博客测试">
+            <a href="/2018/06/14/Haskell-Study-Plan/" title="下一篇: Haskell Study Plan">
                 <i class="fa fa-angle-right"></i>
             </a>
         
