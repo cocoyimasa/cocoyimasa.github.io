@@ -12,20 +12,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="Hesai Wang" />
+<meta name="baidu-site-verification" content="DrxgzwOTCL" />
 
 
-
-<meta name="description" content="实现任意个数参数的函数指针V8中回调函数的函数指针原型为Handle Callback(const Arguments&amp;amp; args); 将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。 Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。 而一般函数指针都指定返回值">
+<meta name="description" content="仔细一想，似乎没写过什么好文章。 本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。 以后还是专注于写好文章，至少要深思熟虑才要发过来。 烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实现任意个数参数的函数指针">
-<meta property="og:url" content="http://cocoyimasa.github.io/2018/06/14/实现任意个数参数的函数指针/index.html">
+<meta property="og:title" content="仔细一想，似乎没写过什么好文章">
+<meta property="og:url" content="http://cocoyimasa.github.io/仔细一想，似乎没写过什么好文章.html">
 <meta property="og:site_name" content="一蓑烟雨任平生">
-<meta property="og:description" content="实现任意个数参数的函数指针V8中回调函数的函数指针原型为Handle Callback(const Arguments&amp;amp; args); 将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。 Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。 而一般函数指针都指定返回值">
+<meta property="og:description" content="仔细一想，似乎没写过什么好文章。 本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。 以后还是专注于写好文章，至少要深思熟虑才要发过来。 烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-14T12:24:20.235Z">
+<meta property="og:updated_time" content="2017-05-21T17:03:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实现任意个数参数的函数指针">
-<meta name="twitter:description" content="实现任意个数参数的函数指针V8中回调函数的函数指针原型为Handle Callback(const Arguments&amp;amp; args); 将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。 Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。 而一般函数指针都指定返回值">
+<meta name="twitter:title" content="仔细一想，似乎没写过什么好文章">
+<meta name="twitter:description" content="仔细一想，似乎没写过什么好文章。 本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。 以后还是专注于写好文章，至少要深思熟虑才要发过来。 烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>实现任意个数参数的函数指针 | 一蓑烟雨任平生</title>
+<title>仔细一想，似乎没写过什么好文章 | 一蓑烟雨任平生</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -259,11 +259,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-实现任意个数参数的函数指针" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-仔细一想，似乎没写过什么好文章" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/14/实现任意个数参数的函数指针/" class="article-date">
-      <time datetime="2018-06-14T12:02:39.000Z" itemprop="datePublished">2018-06-14</time>
+      <a href="/仔细一想，似乎没写过什么好文章.html" class="article-date">
+      <time datetime="2017-05-21T17:00:13.000Z" itemprop="datePublished">2017-05-22</time>
 </a>
 
 
@@ -278,7 +278,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      实现任意个数参数的函数指针
+      仔细一想，似乎没写过什么好文章
     </h1>
   
 
@@ -295,13 +295,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="实现任意个数参数的函数指针"><a href="#实现任意个数参数的函数指针" class="headerlink" title="实现任意个数参数的函数指针"></a>实现任意个数参数的函数指针</h3><p>V8中回调函数的函数指针原型为Handle<value> Callback(const Arguments&amp; args);</value></p>
-<p>将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。</p>
-<p>Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。</p>
-<p>而一般函数指针都指定返回值和参数类型，这种无法通用。</p>
-<p>另外的方式（C++11以上支持）：变长模板参数。</p>
-<p>获取变长模板参数：递归获取。方式：建立无模板参数的函数，其他函数递归获取。</p>
-<p>例：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">count</span>&lt;&gt;&#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> value = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ...Args&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">count</span>&lt;T, Args...&gt;&#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> value = <span class="number">1</span> + count&lt;Args...&gt;::value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>仔细一想，似乎没写过什么好文章。</p>
+<p>本来想把原来博客里的文章迁移过来，想想还是算了，写的不是很好，对人没什么启发。</p>
+<p>以后还是专注于写好文章，至少要深思熟虑才要发过来。</p>
+<p>烂文章写在简书的博客里烂掉好了。反正那里只有我自己知道。</p>
 
       
     </div>
@@ -310,13 +307,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/14/实现任意个数参数的函数指针/">实现任意个数参数的函数指针</a></p>
+        <p><span>本文标题:</span><a href="/仔细一想，似乎没写过什么好文章.html">仔细一想，似乎没写过什么好文章</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Hesai Wang</a></p>
-        <p><span>发布时间:</span>2018-06-14, 20:02:39</p>
-        <p><span>最后更新:</span>2018-06-14, 20:24:20</p>
+        <p><span>发布时间:</span>2017-05-22, 01:00:13</p>
+        <p><span>最后更新:</span>2017-05-22, 01:03:06</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/14/实现任意个数参数的函数指针/" title="实现任意个数参数的函数指针">http://cocoyimasa.github.io/2018/06/14/实现任意个数参数的函数指针/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://cocoyimasa.github.io/2018/06/14/实现任意个数参数的函数指针/　　作者: Hesai Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/仔细一想，似乎没写过什么好文章.html" title="仔细一想，似乎没写过什么好文章">http://cocoyimasa.github.io/仔细一想，似乎没写过什么好文章.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://cocoyimasa.github.io/仔细一想，似乎没写过什么好文章.html　　作者: Hesai Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -329,15 +326,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/14/Haskell-Study-Plan/">
-                    Haskell Study Plan
+                <a href="/Vue学习笔记（一）.html">
+                    Vue学习笔记（一）
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/06/10/UI框架项目重启/">
-                    UI框架项目重启
+                <a href="/博客测试.html">
+                    博客测试
                 </a>
             </div>
         
@@ -349,7 +346,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#实现任意个数参数的函数指针"><span class="toc-number">1.</span> <span class="toc-text">实现任意个数参数的函数指针</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -385,7 +382,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"实现任意个数参数的函数指针　| 一蓑烟雨任平生　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"仔细一想，似乎没写过什么好文章　| 一蓑烟雨任平生　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -405,7 +402,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/14/Haskell-Study-Plan/" title="上一篇: Haskell Study Plan">
+            <a href="/Vue学习笔记（一）.html" title="上一篇: Vue学习笔记（一）">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -413,13 +410,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/06/10/UI框架项目重启/" title="下一篇: UI框架项目重启">
+            <a href="/博客测试.html" title="下一篇: 博客测试">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/C-模拟Haskell的Monad/">C++模拟Haskell的Monad</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/Haskell-Study-Plan/">Haskell Study Plan</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/实现任意个数参数的函数指针/">实现任意个数参数的函数指针</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/10/UI框架项目重启/">UI框架项目重启</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/Vue学习笔记（一）/">Vue学习笔记（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/仔细一想，似乎没写过什么好文章/">仔细一想，似乎没写过什么好文章</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/21/博客测试/">博客测试</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/C-模拟Haskell的Monad.html">C++模拟Haskell的Monad</a></li><li class="post-list-item"><a class="post-list-link" href="/Haskell-Study-Plan.html">Haskell Study Plan</a></li><li class="post-list-item"><a class="post-list-link" href="/实现任意个数参数的函数指针.html">实现任意个数参数的函数指针</a></li><li class="post-list-item"><a class="post-list-link" href="/UI框架项目重启.html">UI框架项目重启</a></li><li class="post-list-item"><a class="post-list-link" href="/Vue学习笔记（一）.html">Vue学习笔记（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/仔细一想，似乎没写过什么好文章.html">仔细一想，似乎没写过什么好文章</a></li><li class="post-list-item"><a class="post-list-link" href="/博客测试.html">博客测试</a></li></ul>
 
 
 

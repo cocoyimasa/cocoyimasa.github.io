@@ -12,19 +12,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="Hesai Wang" />
+<meta name="baidu-site-verification" content="DrxgzwOTCL" />
 
 
-
-<meta name="description" content="Jekyll是个坑最终选定了博客生成系统Hexo，之前用的Jekyll，各种各样的问题烦死人，换个非官方主题报的错根本不是人能看懂的。总之jekyll的体验就一个字：坑。 Hexo的优势选了Hexo才发现它流行是有原因的，首先简单易用，部署到github只需一个命令，其次主题随意换，只需要下载主题，在config中配置即可。其三，Jekyll的优点它全有。 这其实只是一片测试文章测试证明，Hexo">
+<meta name="description" content="实现任意个数参数的函数指针V8中回调函数的函数指针原型为Handle Callback(const Arguments&amp;amp; args); 将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。 Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。 而一般函数指针都指定返回值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客-测试">
-<meta property="og:url" content="http://cocoyimasa.github.io/2016/04/20/第一篇博客-测试/index.html">
+<meta property="og:title" content="实现任意个数参数的函数指针">
+<meta property="og:url" content="http://cocoyimasa.github.io/实现任意个数参数的函数指针.html">
 <meta property="og:site_name" content="一蓑烟雨任平生">
-<meta property="og:description" content="Jekyll是个坑最终选定了博客生成系统Hexo，之前用的Jekyll，各种各样的问题烦死人，换个非官方主题报的错根本不是人能看懂的。总之jekyll的体验就一个字：坑。 Hexo的优势选了Hexo才发现它流行是有原因的，首先简单易用，部署到github只需一个命令，其次主题随意换，只需要下载主题，在config中配置即可。其三，Jekyll的优点它全有。 这其实只是一片测试文章测试证明，Hexo">
-<meta property="og:updated_time" content="2017-05-21T15:52:30.000Z">
+<meta property="og:description" content="实现任意个数参数的函数指针V8中回调函数的函数指针原型为Handle Callback(const Arguments&amp;amp; args); 将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。 Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。 而一般函数指针都指定返回值">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-14T12:24:20.235Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇博客-测试">
-<meta name="twitter:description" content="Jekyll是个坑最终选定了博客生成系统Hexo，之前用的Jekyll，各种各样的问题烦死人，换个非官方主题报的错根本不是人能看懂的。总之jekyll的体验就一个字：坑。 Hexo的优势选了Hexo才发现它流行是有原因的，首先简单易用，部署到github只需一个命令，其次主题随意换，只需要下载主题，在config中配置即可。其三，Jekyll的优点它全有。 这其实只是一片测试文章测试证明，Hexo">
+<meta name="twitter:title" content="实现任意个数参数的函数指针">
+<meta name="twitter:description" content="实现任意个数参数的函数指针V8中回调函数的函数指针原型为Handle Callback(const Arguments&amp;amp; args); 将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。 Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。 而一般函数指针都指定返回值">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>第一篇博客-测试 | 一蓑烟雨任平生</title>
+<title>实现任意个数参数的函数指针 | 一蓑烟雨任平生</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -102,6 +103,8 @@
           <h1 class="header-author"><a href="/">Hesai Wang</a></h1>
         </hgroup>
 
+        
+        <p class="header-subtitle">个人博客-自媒体</p>
         
 
         
@@ -168,7 +171,7 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:cocoyimasa@163.com" title="Email"></a>
                             
                                 <a class="fa GitHub" href="#" title="GitHub"></a>
                             
@@ -194,8 +197,6 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
                     </div>
                 </section>
                 
@@ -204,7 +205,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">编译原理，Web前端</div>
                 </section>
                 
             </div>
@@ -227,6 +228,8 @@
               <h1 class="header-author"><a href="/" title="回到主页">Hesai Wang</a></h1>
             </hgroup>
             
+            <p class="header-subtitle">个人博客-自媒体</p>
+            
             <nav class="header-menu">
                 <ul>
                 
@@ -244,7 +247,7 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:cocoyimasa@163.com" title="Email"></a>
                             
                                 <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
                             
@@ -256,11 +259,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-第一篇博客-测试" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-实现任意个数参数的函数指针" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/20/第一篇博客-测试/" class="article-date">
-      <time datetime="2016-04-20T14:53:40.000Z" itemprop="datePublished">2016-04-20</time>
+      <a href="/实现任意个数参数的函数指针.html" class="article-date">
+      <time datetime="2018-06-14T12:02:39.000Z" itemprop="datePublished">2018-06-14</time>
 </a>
 
 
@@ -275,7 +278,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第一篇博客-测试
+      实现任意个数参数的函数指针
     </h1>
   
 
@@ -292,9 +295,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Jekyll是个坑"><a href="#Jekyll是个坑" class="headerlink" title="Jekyll是个坑"></a>Jekyll是个坑</h1><p>最终选定了博客生成系统Hexo，之前用的Jekyll，各种各样的问题烦死人，换个非官方主题报的错根本不是人能看懂的。<br>总之jekyll的体验就一个字：坑。</p>
-<h1 id="Hexo的优势"><a href="#Hexo的优势" class="headerlink" title="Hexo的优势"></a>Hexo的优势</h1><p>选了Hexo才发现它流行是有原因的，首先简单易用，部署到github只需一个命令，其次主题随意换，只需要下载主题，在config中配置即可。其三，Jekyll的优点它全有。</p>
-<h1 id="这其实只是一片测试文章"><a href="#这其实只是一片测试文章" class="headerlink" title="这其实只是一片测试文章"></a>这其实只是一片测试文章</h1><p>测试证明，Hexo真好用。</p>
+        <h3 id="实现任意个数参数的函数指针"><a href="#实现任意个数参数的函数指针" class="headerlink" title="实现任意个数参数的函数指针"></a>实现任意个数参数的函数指针</h3><p>V8中回调函数的函数指针原型为Handle<value> Callback(const Arguments&amp; args);</value></p>
+<p>将参数抽象成类，将返回值抽象为模板句柄，从而实现回调函数和参数类型、参数个数、返回值不相关，这也是一种解耦合。</p>
+<p>Argument只需提供参数读写成员函数即可，这与C语言中的…的va_start、va_arg函数组有异曲同工之妙。</p>
+<p>而一般函数指针都指定返回值和参数类型，这种无法通用。</p>
+<p>另外的方式（C++11以上支持）：变长模板参数。</p>
+<p>获取变长模板参数：递归获取。方式：建立无模板参数的函数，其他函数递归获取。</p>
+<p>例：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">count</span>&lt;&gt;&#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> value = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ...Args&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">count</span>&lt;T, Args...&gt;&#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> value = <span class="number">1</span> + count&lt;Args...&gt;::value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -303,13 +310,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/04/20/第一篇博客-测试/">第一篇博客-测试</a></p>
+        <p><span>本文标题:</span><a href="/实现任意个数参数的函数指针.html">实现任意个数参数的函数指针</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Hesai Wang</a></p>
-        <p><span>发布时间:</span>2016-04-20, 22:53:40</p>
-        <p><span>最后更新:</span>2017-05-21, 23:52:30</p>
+        <p><span>发布时间:</span>2018-06-14, 20:02:39</p>
+        <p><span>最后更新:</span>2018-06-14, 20:24:20</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/04/20/第一篇博客-测试/" title="第一篇博客-测试">http://cocoyimasa.github.io/2016/04/20/第一篇博客-测试/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://cocoyimasa.github.io/2016/04/20/第一篇博客-测试/　　作者: Hesai Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/实现任意个数参数的函数指针.html" title="实现任意个数参数的函数指针">http://cocoyimasa.github.io/实现任意个数参数的函数指针.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://cocoyimasa.github.io/实现任意个数参数的函数指针.html　　作者: Hesai Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -319,13 +326,30 @@
 
 
 
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/Haskell-Study-Plan.html">
+                    Haskell Study Plan
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/UI框架项目重启.html">
+                    UI框架项目重启
+                </a>
+            </div>
+        
+    </nav>
+
   
 </article>
 
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Jekyll是个坑"><span class="toc-number">1.</span> <span class="toc-text">Jekyll是个坑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo的优势"><span class="toc-number">2.</span> <span class="toc-text">Hexo的优势</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这其实只是一片测试文章"><span class="toc-number">3.</span> <span class="toc-text">这其实只是一片测试文章</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#实现任意个数参数的函数指针"><span class="toc-number">1.</span> <span class="toc-text">实现任意个数参数的函数指针</span></a></li></ol>
         
     </div>
     <style>
@@ -361,7 +385,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"第一篇博客-测试　| 一蓑烟雨任平生　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"实现任意个数参数的函数指针　| 一蓑烟雨任平生　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -381,17 +405,21 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/Haskell-Study-Plan.html" title="上一篇: Haskell Study Plan">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/UI框架项目重启.html" title="下一篇: UI框架项目重启">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/第一篇博客-测试/">第一篇博客-测试</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/C-模拟Haskell的Monad.html">C++模拟Haskell的Monad</a></li><li class="post-list-item"><a class="post-list-link" href="/Haskell-Study-Plan.html">Haskell Study Plan</a></li><li class="post-list-item"><a class="post-list-link" href="/实现任意个数参数的函数指针.html">实现任意个数参数的函数指针</a></li><li class="post-list-item"><a class="post-list-link" href="/UI框架项目重启.html">UI框架项目重启</a></li><li class="post-list-item"><a class="post-list-link" href="/Vue学习笔记（一）.html">Vue学习笔记（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/仔细一想，似乎没写过什么好文章.html">仔细一想，似乎没写过什么好文章</a></li><li class="post-list-item"><a class="post-list-link" href="/博客测试.html">博客测试</a></li></ul>
 
 
 
@@ -405,10 +433,10 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 Hesai Wang
+                2016-2018 Hesai Wang
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <!--<a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>-->
             </div>
         </div>
         
@@ -468,7 +496,7 @@
             
             
             
-            
+             tags: ".article-tag a", 
             
             
              archives: ".archive-article-title", 
